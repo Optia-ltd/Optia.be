@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="350" height="350" version="1.1" viewBox="0 0 92.604 92.604" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="swatch29">
+   <stop stop-color="#27259e" offset="0"/>
+  </linearGradient>
+  <linearGradient id="swatch28">
+   <stop stop-color="#ea009d" offset="0"/>
+  </linearGradient>
+  <linearGradient id="swatch17">
+   <stop stop-color="#72cfeb" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient11" x1="37.401" x2="60.995" y1="22.291" y2="22.291" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" offset="0"/>
+  </linearGradient>
+  <linearGradient id="BorderColor" x1="1.0431e-7" x2="67.733" y1="33.867" y2="33.867" gradientTransform="translate(13.678 13.009)" gradientUnits="userSpaceOnUse">
+   <stop offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient27" x1="-1.3158" x2="69.049" y1="33.867" y2="33.867" gradientTransform="translate(13.678 13.009)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f5f5f5" offset="0"/>
+  </linearGradient>
+  <clipPath id="clipPath33">
+   <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+  </clipPath>
+  <linearGradient id="linearGradient2679" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(2.7687 0 0 2.1047 -15.526 -62.599)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient4142" x1="17.056" x2="20.638" y1="1.6419" y2="1.6419" gradientTransform="matrix(.96008 0 0 .96008 -2.6057 2.8171)" gradientUnits="userSpaceOnUse" xlink:href="#swatch28"/>
+  <linearGradient id="linearGradient5018" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(.29771 0 0 1.6961 12.416 -51.24)" gradientUnits="userSpaceOnUse" xlink:href="#swatch29"/>
+  <linearGradient id="linearGradient5327" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(1.6101 0 0 2.1047 -8.0307 -59.638)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient5499" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(1.4778 0 0 2.1047 9.1059 -47.406)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient5542" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(1.0292 0 0 2.1047 17.323 -53.759)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient5585" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(.94459 0 0 2.1047 14.352 -50.438)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient5671" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(1.6752 0 0 2.1047 .69019 -41.342)" gradientUnits="userSpaceOnUse" xlink:href="#swatch17"/>
+  <linearGradient id="linearGradient5714" x1="14.829" x2="27.691" y1="33.939" y2="33.939" gradientTransform="matrix(.61279 0 0 2.1047 16.445 -38.31)" gradientUnits="userSpaceOnUse" xlink:href="#swatch28"/>
+  <linearGradient id="linearGradient6965" x1="10.687" x2="26.029" y1="56.827" y2="56.827" gradientTransform="matrix(1.4748 0 0 1.1661 -6.5814 -13.225)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#c3d6fd" stop-opacity=".78037" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient28" x1="25.533" x2="36.003" y1="14.93" y2="14.93" gradientUnits="userSpaceOnUse" xlink:href="#swatch28"/>
+  <linearGradient id="linearGradient29" x1="18.926" x2="32.163" y1="17.673" y2="17.673" gradientUnits="userSpaceOnUse" xlink:href="#swatch29"/>
+  <linearGradient id="linearGradient31" x1="37.31" x2="47.897" y1="11.826" y2="11.826" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#27259e" offset="0"/>
+  </linearGradient>
+  <linearGradient id="linearGradient32" x1="25.533" x2="44.541" y1="27.057" y2="27.057" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#27259e" offset="0"/>
+  </linearGradient>
+ </defs>
+ <path d="m61.507 89.114c-9.8991 1.0469-23.822-1.5152-34.598-10.82s-18.407-25.351-15.561-39.096c2.8457-13.745 16.167-25.187 30.92-29.499s30.937-1.4958 37.991 11.202c7.0535 12.698 4.9762 35.276 0.99957 48.893s-9.8521 18.273-19.751 19.32z" fill="#54ccf1" fill-opacity=".2228"/>
+ <rect x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="url(#linearGradient27)"/>
+ <g transform="translate(.81576 .81576)">
+  <g clip-path="url(#clipPath33)">
+   <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+   <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+   <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+   <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+  </g>
+ </g>
+ <path d="m19.34 13.652s-3.0811 1.0016-4.3412 3.0211c-0.95642 1.5328-1.1368 57.42-1.1368 57.42-0.04359 2.202 1.3473 4.1462 3.4273 5.3487l17.5 0.18159 0.03603-65.516z" fill="url(#linearGradient6965)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.9191"/>
+ <g transform="translate(.81576 .81576)">
+  <circle cx="19.375" cy="18.676" r="1.5414" fill="#ff3434"/>
+  <circle cx="24.169" cy="18.676" r="1.5414" fill="#ffca34"/>
+  <circle cx="28.727" cy="18.676" r="1.5414" fill="#26b700"/>
+  <g transform="matrix(1.1901 0 0 1.2565 5.2217 24.598)" fill="url(#linearGradient11)">
+   <rect x="25.533" y="7.7629" width="35.612" height="2.1405" ry="1.0702" fill="url(#linearGradient2679)"/>
+   <g transform="matrix(.91782 0 0 1 10.989 .28861)">
+    <rect x="18.926" y="16.603" width="13.237" height="2.1405" ry="1.0702" fill="url(#linearGradient29)"/>
+    <rect x="32.584" y="16.603" width="13.237" height="2.1405" ry="1.0702" fill="url(#linearGradient5542)"/>
+   </g>
+   <rect x="28.359" y="19.923" width="12.15" height="2.1405" ry="1.0702" fill="url(#linearGradient5585)"/>
+   <rect x="31.021" y="22.955" width="19.008" height="2.1405" ry="1.0702" fill="url(#linearGradient5499)"/>
+   <rect x="25.533" y="25.987" width="19.008" height="2.1405" ry="1.0702" fill="url(#linearGradient32)"/>
+   <rect x="25.533" y="29.019" width="21.547" height="2.1405" ry="1.0702" fill="url(#linearGradient5671)"/>
+   <rect x="25.533" y="32.051" width="7.8819" height="2.1405" ry="1.0702" fill="url(#linearGradient5714)"/>
+   <g transform="matrix(.91782 0 0 1 10.989 .071741)">
+    <rect x="15.846" y="10.723" width="20.71" height="2.1405" ry="1.0702" fill="url(#linearGradient5327)"/>
+    <rect x="37.31" y="10.756" width="10.587" height="2.1405" ry="1.0702" fill="url(#linearGradient31)"/>
+   </g>
+   <rect x="25.533" y="13.86" width="10.47" height="2.1405" ry="1.0702" fill="url(#linearGradient28)"/>
+   <rect x="16.83" y="5.4614" width="3.8292" height="1.7249" ry=".61284" fill="url(#linearGradient5018)"/>
+   <path d="m14.534 2.4832 1.9102 1.9102-1.9102 1.9102" fill="none" stroke="url(#linearGradient4142)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5282"/>
+  </g>
+ </g>
+ <g transform="translate(.81576 .81576)" clip-path="url(#clipPath33)">
+  <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+  <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+  <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+  <rect transform="translate(-.81576 -.81576)" x="13.862" y="13.193" width="67.365" height="67.365" ry="5.6783" fill="none" stroke="url(#BorderColor)" stroke-linecap="round" stroke-width="2"/>
+ </g>
+</svg>
