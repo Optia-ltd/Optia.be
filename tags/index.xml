@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Optia</title>
-    <link>https://www.example.com/tags/</link>
+    <link>https://www.optia.be/tags/</link>
     <description>Recent content in Tags on Optia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://www.optia.be/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimization</title>
-      <link>https://www.example.com/tags/optimization/</link>
+      <link>https://www.optia.be/tags/optimization/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/optimization/</guid>
+      <guid>https://www.optia.be/tags/optimization/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Solvers</title>
-      <link>https://www.example.com/tags/solvers/</link>
+      <link>https://www.optia.be/tags/solvers/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/solvers/</guid>
+      <guid>https://www.optia.be/tags/solvers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>css</title>
-      <link>https://www.example.com/tags/css/</link>
+      <link>https://www.optia.be/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/css/</guid>
+      <guid>https://www.optia.be/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://www.example.com/tags/html/</link>
+      <link>https://www.optia.be/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/html/</guid>
+      <guid>https://www.optia.be/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://www.example.com/tags/markdown/</link>
+      <link>https://www.optia.be/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/markdown/</guid>
+      <guid>https://www.optia.be/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>https://www.example.com/tags/index/</link>
+      <link>https://www.optia.be/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.example.com/tags/index/</guid>
+      <guid>https://www.optia.be/tags/index/</guid>
       <description></description>
     </item>
     

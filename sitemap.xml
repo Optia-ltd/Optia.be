@@ -2,61 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.example.com/</loc>
+    <loc>https://www.optia.be/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://www.example.com/post/</loc>
+    <loc>https://www.optia.be/post/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/post/solver-makes-difference/</loc>
+    <loc>https://www.optia.be/post/solver-makes-difference/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/optimization/</loc>
+    <loc>https://www.optia.be/tags/optimization/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/solvers/</loc>
+    <loc>https://www.optia.be/tags/solvers/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/</loc>
+    <loc>https://www.optia.be/tags/</loc>
     <lastmod>2024-05-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/archives/</loc>
+    <loc>https://www.optia.be/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/css/</loc>
+    <loc>https://www.optia.be/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/html/</loc>
+    <loc>https://www.optia.be/tags/html/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/tags/markdown/</loc>
+    <loc>https://www.optia.be/tags/markdown/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/post/markdown-syntax/</loc>
+    <loc>https://www.optia.be/post/markdown-syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/series/</loc>
+    <loc>https://www.optia.be/series/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/series/themes-guide/</loc>
+    <loc>https://www.optia.be/series/themes-guide/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/post/math-typesetting/</loc>
+    <loc>https://www.optia.be/post/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.example.com/about/</loc>
+    <loc>https://www.optia.be/about/</loc>
   </url><url>
-    <loc>https://www.example.com/faq/</loc>
+    <loc>https://www.optia.be/faq/</loc>
   </url><url>
-    <loc>https://www.example.com/process/</loc>
+    <loc>https://www.optia.be/process/</loc>
   </url><url>
-    <loc>https://www.example.com/services/</loc>
+    <loc>https://www.optia.be/services/</loc>
   </url><url>
-    <loc>https://www.example.com/contact/</loc>
+    <loc>https://www.optia.be/contact/</loc>
   </url><url>
-    <loc>https://www.example.com/expertise/</loc>
+    <loc>https://www.optia.be/expertise/</loc>
   </url><url>
-    <loc>https://www.example.com/tags/index/</loc>
+    <loc>https://www.optia.be/tags/index/</loc>
   </url>
 </urlset>
