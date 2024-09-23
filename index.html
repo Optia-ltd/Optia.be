@@ -1075,6 +1075,7 @@
     plotElement.addEventListener("wheel", function(e) {
       if (e.deltaY !== 0) {
         window.scrollBy(0, e.deltaY);
+        e.preventDefault();
       }
     }, { passive: true });
     let startY;
@@ -1085,10 +1086,13 @@
       const deltaY = e.touches[0].clientY - startY;
       window.scrollBy(0, -deltaY);
       startY = e.touches[0].clientY;
+      e.preventDefault();
     }, { passive: false });
     plotElement.addEventListener("touchend", function(e) {
+      e.preventDefault();
     }, { passive: false });
     plotElement.addEventListener("touchcancel", function(e) {
+      e.preventDefault();
     }, { passive: false });
   }
   document.addEventListener("scroll", (event) => {
