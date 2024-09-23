@@ -481,11 +481,11 @@
           <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3">Artificial <span class='text-danger'>intelligence</span> without the <span class='text-danger'>magic</span></h3>
         
         
-          <p class="justify-content pb-2"> Using modern <span class='text-danger'>optimization</span> approaches, we provide you with a principled way to leverage <span class='text-danger'>artificial intelligence</span> for your organization. <br> We strive to use our technical expertise to carefully select the right tools and techniques for your particular challenges. Working closely together with your experts, we keep you informed about the choices we've made and why. This way, you can be confident that you're getting the most out of your investment, now and <span class='text-danger'>into the future</span>. </p>
+          <p class="justify-content pb-2"> There is no <span class='text-secondary'>general-purpose</span> algorithm that will solve all of the world's problems, but there may be one that solves <span class='text-danger'>yours</span>. <br> Our goal is to provide you with a principled way to leverage <span class='text-danger'>artificial intelligence</span> for your organization. <br> We carefully select &mdash; or develop! &mdash; the right tools and techniques for your particular challenges. <br> Working closely together with you and your in-house experts, we keep you informed about the choices we've made and why.</p>
         
         
       </div>
-    <div class="col-md-6 pr-5 justify-content-center">
+    <div class="col-11 col-md-6 pr-5 justify-content-center">
         <div id="free-lunch" style="max-height: 300px;"></div>
     </div>
     </div>
@@ -568,88 +568,7 @@
   </div>
 </section>
 
-  <section class="section services py-5">
-  <div class="container">
-    <div class="row justify-content-center pb-5">
-        <div class="col-lg-4 px-5">
-            <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3"> You may be wondering ... </h3>
-            <div class="justify-content-center">
-                <div class="text-center text-center border rounded-3 p-3">
-                    <b>More burning questions?</b><br>
-                    
-                    Don't hesitate to
-                    <a href="/contact">reach out</a>!
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-7 py-4">
-            <div class="accordion accordion-flush" id="faq">
-                
-                
-                
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="flush-heading1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse1" aria-expanded="false"
-                            aria-controls="flush-collapse1">
-                            I want to know how I can leverage AI in my organization. Can you help me?
-                        </button>
-                    </h3>
-                    <div id="flush-collapse1" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            This is right in our wheelhouse! Whether you know exactly where you&rsquo;d like to introduce AI capabilities, or you&rsquo;re still exploring all your options, we&rsquo;d gladly sit down with you to see what&rsquo;s possible.
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="flush-heading2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse2" aria-expanded="false"
-                            aria-controls="flush-collapse2">
-                            Do I need a big data center if I want to run AI solutions?
-                        </button>
-                    </h3>
-                    <div id="flush-collapse2" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            Not for ours! These days, AI is associated with <a href="https://en.wikipedia.org/wiki/Large_language_model">large language models</a> and ChatGPT. But in fact, many of the capabilities ascribed to such technologies can be achieved far more efficiently using a more targeted approach of modeling your problem, and having a computer generate its solution, solving the right set of optimization problems. Usually, these solutions can run on a standard laptop or desktop computer.
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="accordion-item">
-                    <h3 class="accordion-header" id="flush-heading3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapse3" aria-expanded="false"
-                            aria-controls="flush-collapse3">
-                            How is optimization related to AI?
-                        </button>
-                    </h3>
-                    <div id="flush-collapse3" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <p>AI is not a very well-defined discipline. For practical purposes, it is useful to consider it as a class of software that satisfies the following:</p>
-<ul>
-<li>It outputs decisions and/or predictions based on a combination of prior knowledge and data.</li>
-<li>It is hard to hand-program the algorithm to generate this output directly.</li>
-</ul>
-<p>Numerical optimization falls precisly within this category. The main difference from what people usually associate with AI, is that optimization-based techniques do not necessarily rely on large-scale <em>neural networks</em> to <em>learn</em>. In fact, because they are so unpredictable (and often fragile), we usually consider the use of neural networks as a last resort, only for those rare cases where almost nothing about the problem can be accurately modeled mathematically.</p>
-
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-  </div>
-</section>
-
+  
   
   
   <section class="section cta py-5">
@@ -960,9 +879,9 @@
     trajectory.z.push(l(xp, yp));
     return true;
   }
-  function updateTrajectory(reps = 5) {
+  function updateTrajectory(reps = 1) {
     for (let i2 = 0; i2 < reps; i2++) {
-      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.01, 0, trajAnimState);
+      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.07, 0, trajAnimState);
     }
   }
   var trajectoryTrace = {
@@ -1061,7 +980,7 @@
     if (!trajAnimState.converged) {
       trajAnimState.lineFrame += 1;
       if (trajAnimState.lineFrame >= trajAnimState.delay) {
-        updateTrajectory(2);
+        updateTrajectory(1);
         Plotly.animate("surface", { data: [trajectory], traces: [1] }, {
           transition: {
             duration: 0
