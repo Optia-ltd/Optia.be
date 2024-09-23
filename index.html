@@ -826,7 +826,7 @@
     return 1.1 * (-10 * y - 2) * exp(-5 * sq(x + 0.4) - 5 * sq(y + 0.2)) + 0.7 * (-4 * sq(x) - 4 * y * (sq(x) - sq(y)) + 8 * y - 1.2) / (1.8 * sq(x - 0.4) + 2 * sq(-sq(x) + y) + sq(sq(x) - sq(y)) + 2 * sq(y - 0.3) + 1);
   }
   var rosenbrock = (x, y) => 0.7 * log(1 + 1.8 * sq(x - 0.4) + 2 * sq(y - 0.3) + sq(x * x - y * y) + 2 * sq(y - x * x)) + 1.1 * exp(-5 * (sq(x + 0.4) + sq(y + 0.2)));
-  var xyz = generate_data(10, 70, rosenbrock);
+  var xyz = generate_data(13, 45, rosenbrock);
   var zTrue = xyz.z;
   var colorscale = [
     ["0", "#063a82"],
@@ -844,7 +844,7 @@
   var trajectory = { x: [z0.x], y: [z0.y], z: [rosenbrock(z0.x, z0.y) + 0.05] };
   var fadeInState = {
     done: false,
-    len: 50,
+    len: 20,
     currFrame: 0,
     interval: null,
     started: false
@@ -853,7 +853,7 @@
     converged: false,
     i_x: 0,
     i_y: 0,
-    len: 20,
+    len: 30,
     currFrame: 0,
     lineFrame: 0,
     delay: 50
@@ -880,7 +880,7 @@
   }
   function updateTrajectory(reps = 1) {
     for (let i2 = 0; i2 < reps; i2++) {
-      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.07, 0, trajAnimState);
+      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.05, 0, trajAnimState);
     }
   }
   var trajectoryTrace = {
