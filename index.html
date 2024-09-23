@@ -1087,6 +1087,12 @@
       startY = e.touches[0].clientY;
       e.preventDefault();
     }, { passive: false });
+    plotDiv.addEventListener("touchend", function(e) {
+      startY = 0;
+    });
+    plotDiv.addEventListener("touchcancel", function(e) {
+      startY = 0;
+    });
   }
   document.addEventListener("scroll", (event) => {
     pushBuffer(scrollBuf, window.scrollY);
