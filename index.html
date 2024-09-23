@@ -1080,19 +1080,16 @@
     let startY;
     plotElement.addEventListener("touchstart", function(e) {
       startY = e.touches[0].clientY;
-    });
+    }, { passive: false });
     plotElement.addEventListener("touchmove", function(e) {
       const deltaY = e.touches[0].clientY - startY;
       window.scrollBy(0, -deltaY);
       startY = e.touches[0].clientY;
-      e.preventDefault();
     }, { passive: false });
-    plotDiv.addEventListener("touchend", function(e) {
-      startY = 0;
-    });
-    plotDiv.addEventListener("touchcancel", function(e) {
-      startY = 0;
-    });
+    plotElement.addEventListener("touchend", function(e) {
+    }, { passive: false });
+    plotElement.addEventListener("touchcancel", function(e) {
+    }, { passive: false });
   }
   document.addEventListener("scroll", (event) => {
     pushBuffer(scrollBuf, window.scrollY);
