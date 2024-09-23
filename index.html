@@ -452,25 +452,34 @@
 </section>
 
   <section class="section services py-5">
-  <div class="container">
-    <div class="row justify-content-center pb-5">
-    <div class="col-md-6">
-        
-        <div id="surface" style="visibility: hidden; max-height: 300px;"></div>
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div id="surface-container" class="col-md-6">
+                    
+                    <div id="" style=" 
+                        position: absolute;
+                        left:0; right: 0;
+                        height: 300px;
+                        box-sizing: border-box;
+                        background: rgba(0,0,0,0.0);
+                        z-index: 100;
+                     "></div>
+                    
+                    <div id="surface" style="visibility: hidden; max-height: 300px;"></div>
+            </div>
+            <div class="col-md-6">
+                
+                <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3">Custom solutions for automated <span class='text-danger'>decision making</span></h3>
+                
+                
+                <p class="justify-content pb-3"> Using state-of-the-art techniques from machine learning, optimization, and control, we help you design intelligent <span class="text-danger">decision making algorithms</span> to efficiently and reliably find <span class="text-danger">optimal solutions</span> to the most complex challenges. </p>
+                
+                
+                <a class="btn btn btn-outline-custom  px-4 my-1" href="expertise">Our expertise</a>
+                
+            </div>
+        </div>
     </div>
-      <div class="col-md-6">
-        
-          <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3">Custom solutions for automated <span class='text-danger'>decision making</span></h3>
-        
-        
-          <p class="justify-content pb-3"> Using state-of-the-art techniques from machine learning, optimization, and control, we help you design intelligent <span class="text-danger">decision making algorithms</span> to efficiently and reliably find <span class="text-danger">optimal solutions</span> to the most complex challenges. </p>
-         
-        
-        <a class="btn btn btn-outline-custom  px-4 my-1" href="expertise">Our expertise</a>
-        
-      </div>
-    </div>
-  </div>
 </section>
 
   <section class="section services py-5">
@@ -641,10 +650,6 @@
           
             <li class="">
               <a class="small text-black-61 text-decoration-none" href="/process">Our process</a>
-            </li>
-          
-            <li class="">
-              <a class="small text-black-61 text-decoration-none" href="/faq">FAQ</a>
             </li>
           
         </ul>
@@ -1072,47 +1077,7 @@
   function clamp(s, min, max) {
     return Math.min(max, Math.max(min, s));
   }
-  var touchScrollState = {
-    startY: 0,
-    lastY: 0,
-    velocity: 0,
-    scrolling: false
-  };
-  if (plotElement != void 0) {
-    let inertiaScroll = function() {
-      if (Math.abs(touchScrollState.velocity) > 0.5) {
-        window.scrollBy(0, touchScrollState.velocity);
-        touchScrollState.velocity *= 0.95;
-        requestAnimationFrame(inertiaScroll);
-      } else {
-        touchScrollState.scrolling = false;
-      }
-    };
-    plotElement.addEventListener("wheel", function(e) {
-      if (e.deltaY !== 0) {
-        window.scrollBy(0, e.deltaY);
-      }
-    }, { passive: true });
-    plotElement.addEventListener("touchstart", function(e) {
-      touchScrollState.startY = touchScrollState.lastY = e.touches[0].clientY;
-      touchScrollState.velocity = 0;
-      touchScrollState.scrolling = false;
-    }, { passive: false });
-    plotElement.addEventListener("touchmove", function(e) {
-      const deltaY = touchScrollState.lastY - e.touches[0].clientY;
-      window.scrollBy(0, deltaY);
-      touchScrollState.velocity = deltaY;
-      touchScrollState.lastY = e.touches[0].clientY;
-      touchScrollState.scrolling = true;
-    }, { passive: false });
-    window.addEventListener("touchend", () => {
-      if (touchScrollState.scrolling) {
-        requestAnimationFrame(inertiaScroll);
-      }
-    });
-  }
   document.addEventListener("scroll", (event) => {
-    touchScrollState.scrolling = false;
     pushBuffer(scrollBuf, window.scrollY);
     if (!ticking) {
       window.requestAnimationFrame(() => {
