@@ -860,7 +860,9 @@
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     showlegend: false,
+    hovermode: false,
     scene: {
+      hovermode: false,
       dragmode: false,
       colorbar: {
         visible: false
@@ -887,13 +889,18 @@
       z: Z
     };
   }
+  function sq(x) {
+    return x * x;
+  }
+  var log = (x) => Math.log(x);
+  var exp = (x) => Math.exp(x);
   function dfdx(x, y) {
-    return 2 * (x * x - y * y) * 2 * x + 4 * (y - x * x) * (-2 * x) + 0.4 * (x - 0.4);
+    return 1.1 * (-10 * x - 4) * exp(-5 * sq(x + 0.4) - 5 * sq(y + 0.2)) + 0.7 * (-8 * x * (-sq(x) + y) * 4 * x * (sq(x) - sq(y)) + 3.6 * x - 1.44) / (1.8 * sq(x - 0.4) + 2 * sq(-sq(x) + y) + sq(sq(x) - sq(y)) + 2 * sq(y - 0.3) + 1);
   }
   function dfdy(x, y) {
-    return 2 * (x * x - y * y) * (-2 * y) + 4 * (y - x * x) + 4 * (y - 0.3);
+    return 1.1 * (-10 * y - 2) * exp(-5 * sq(x + 0.4) - 5 * sq(y + 0.2)) + 0.7 * (-4 * sq(x) - 4 * y * (sq(x) - sq(y)) + 8 * y - 1.2) / (1.8 * sq(x - 0.4) + 2 * sq(-sq(x) + y) + sq(sq(x) - sq(y)) + 2 * sq(y - 0.3) + 1);
   }
-  var rosenbrock = (x, y) => 0.7 * Math.log(1 + 1.8 * (x - 0.4) * (x - 0.4) + 2 * (y - 0.3) * (y - 0.3) + Math.pow(x * x - y * y, 2) + 2 * Math.pow(y - x * x, 2)) + 1.1 * Math.exp(-5 * ((x + 0.4) * (x + 0.4) + (y + 0.2) * (y + 0.2)));
+  var rosenbrock = (x, y) => 0.7 * log(1 + 1.8 * sq(x - 0.4) + 2 * sq(y - 0.3) + sq(x * x - y * y) + 2 * sq(y - x * x)) + 1.1 * exp(-5 * (sq(x + 0.4) + sq(y + 0.2)));
   var xyz = generate_data(10, 70, rosenbrock);
   var zTrue = xyz.z;
   xyz.colorscale = [
@@ -901,17 +908,26 @@
     ["0.3", "#063a82"],
     ["1", "#97c1fb"]
   ];
+  var commonContourOption = { highlight: false };
+  var contour = {
+    x: commonContourOption,
+    y: commonContourOption,
+    z: commonContourOption
+  };
   var data = [
     {
       ...xyz,
       type: "surface",
+      opacity: 0,
+      contours: contour,
       ...dataCfg
     }
   ];
-  var trajectory = { x: [-0.9], y: [-0], z: [rosenbrock(-0.9, 0) + 0.05] };
+  var z0 = { x: -0.6, y: -0 };
+  var trajectory = { x: [z0.x], y: [z0.y], z: [rosenbrock(z0.x, z0.y) + 0.05] };
   var fadeInState = {
     done: false,
-    len: 10,
+    len: 1,
     currFrame: 0,
     interval: null
   };
@@ -946,7 +962,7 @@
   }
   function updateTrajectory(reps = 5) {
     for (let i2 = 0; i2 < reps; i2++) {
-      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.02, 0, trajAnimState);
+      step((x, y) => rosenbrock(x, y) + 0.05, dfdx, dfdy, 0.01, 0, trajAnimState);
     }
   }
   var trajectoryTrace = {
@@ -988,17 +1004,15 @@
     displayModeBar: false,
     showscale: false,
     scrollZoom: false,
-    dragMode: false
+    dragMode: false,
+    responsive: true
   };
   document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("surface").style.visibility = "visible";
     Plotly.newPlot("surface", data, layout, config).then(() => {
       fadeIn(fadeInState);
-      fadeInState.done = true;
       startRotation(rotationParams);
     }).then(() => {
-      Plotly.addTraces("surface", trajectoryTrace);
-      Plotly.addTraces("surface", finalPtTrace);
     });
   });
   var BASE_SPEED = 5e-3;
@@ -1028,7 +1042,7 @@
       if (!fadeInState2.done) {
         let i2 = fadeInState2.currFrame / fadeInState2.len;
         fadeInState2.done = i2 >= 1;
-        Plotly.animate("surface", { data: [{ opacity: Math.pow(i2, 2) }], traces: [0, 1, 2] }, {
+        Plotly.animate("surface", { data: [{ opacity: Math.pow(i2, 2) }], traces: [0] }, {
           transition: {
             duration: 0
           },
@@ -1043,6 +1057,44 @@
       }
     }, 1e3 / rotationParams.framesPerSecond);
   }
+  function updateTrajAnimation() {
+    if (!trajAnimState.converged) {
+      trajAnimState.lineFrame += 1;
+      if (trajAnimState.lineFrame >= trajAnimState.delay) {
+        updateTrajectory(2);
+        Plotly.animate("surface", { data: [trajectory], traces: [1] }, {
+          transition: {
+            duration: 0
+          },
+          frame: {
+            duration: 0,
+            redraw: true
+          }
+        });
+      }
+    } else {
+      if (trajAnimState.currFrame <= trajAnimState.len) {
+        let i2 = trajAnimState.currFrame / trajAnimState.len;
+        let progress = easingFunc(i2);
+        Plotly.animate("surface", {
+          data: [{
+            opacity: progress,
+            marker: { size: 5 * progress }
+          }],
+          traces: [2]
+        }, {
+          frame: {
+            duration: 0,
+            redraw: true
+          },
+          transition: {
+            duration: 50
+          }
+        });
+      }
+      trajAnimState.currFrame += 1;
+    }
+  }
   function startRotation(rotationParams2) {
     if (rotationParams2.running) {
       return;
@@ -1053,41 +1105,8 @@
       }
       layoutUpdate = getNewLayout();
       Plotly.relayout("surface", layoutUpdate);
-      if (!trajAnimState.converged) {
-        trajAnimState.lineFrame += 1;
-        if (trajAnimState.lineFrame >= trajAnimState.delay) {
-          updateTrajectory(2);
-          Plotly.animate("surface", { data: [trajectory], traces: [1] }, {
-            transition: {
-              duration: 0
-            },
-            frame: {
-              duration: 0,
-              redraw: true
-            }
-          });
-        }
-      } else {
-        if (trajAnimState.currFrame <= trajAnimState.len) {
-          let i2 = trajAnimState.currFrame / trajAnimState.len;
-          let progress = easingFunc(i2);
-          Plotly.animate("surface", {
-            data: [{
-              opacity: progress,
-              marker: { size: 5 * progress }
-            }],
-            traces: [2]
-          }, {
-            frame: {
-              duration: 0,
-              redraw: true
-            },
-            transition: {
-              duration: 50
-            }
-          });
-        }
-        trajAnimState.currFrame += 1;
+      if (fadeInState.done) {
+        updateTrajAnimation();
       }
       rotationAngle += rotationParams2.speed;
       rotationAngle %= 2 * Math.PI;
@@ -1102,6 +1121,8 @@
   }
   function stopFade() {
     clearInterval(fadeInState.interval);
+    Plotly.addTraces("surface", trajectoryTrace);
+    Plotly.addTraces("surface", finalPtTrace);
   }
   function pushBuffer(buffer, el) {
     for (i = 0; i < buffer.length - 1; i++) {
@@ -1128,15 +1149,31 @@
   function clamp(s, min, max) {
     return Math.min(max, Math.max(min, s));
   }
+  var plotElement = document.getElementById("surface");
+  if (plotElement != void 0) {
+    plotElement.addEventListener("wheel", function(e) {
+      if (e.deltaY !== 0) {
+        window.scrollBy(0, e.deltaY);
+      }
+    }, { passive: true });
+    let startY;
+    plotElement.addEventListener("touchstart", function(e) {
+      startY = e.touches[0].clientY;
+    });
+    plotElement.addEventListener("touchmove", function(e) {
+      const deltaY = e.touches[0].clientY - startY;
+      window.scrollBy(0, -deltaY);
+      startY = e.touches[0].clientY;
+      e.preventDefault();
+    }, { passive: false });
+  }
   document.addEventListener("scroll", (event) => {
     pushBuffer(scrollBuf, window.scrollY);
     if (!ticking) {
       window.requestAnimationFrame(() => {
         if (isInViewport(plotContainer)) {
-          console.log("START");
           startRotation(rotationParams);
         } else {
-          console.log("STOP!");
           stopRotation();
         }
         updateSpeed(clamp(velocity(scrollBuf), -30 * BASE_SPEED, 30 * BASE_SPEED));
