@@ -793,6 +793,7 @@
   };
 
   // ns-hugo:/home/mathijs/Work/Optia-repos/Optia-home/themes/up-business-theme/assets/js/animation/plot3d.js
+  var plotElement = document.getElementById("surface");
   function generate_data(nx, ny, f) {
     let rs = linspace(0, 1, nx, true);
     let angles = linspace(0, 2 * Math.PI, ny);
@@ -910,7 +911,8 @@
   var anilayout = getNewLayout();
   var layout = {
     ...baseLayout,
-    ...anilayout
+    ...anilayout,
+    scrollZoom: false
   };
   var config = {
     displayModeBar: false,
@@ -1070,32 +1072,47 @@
   function clamp(s, min, max) {
     return Math.min(max, Math.max(min, s));
   }
-  var plotElement = document.getElementById("surface");
+  var touchScrollState = {
+    startY: 0,
+    lastY: 0,
+    velocity: 0,
+    scrolling: false
+  };
   if (plotElement != void 0) {
+    let inertiaScroll = function() {
+      if (Math.abs(touchScrollState.velocity) > 0.5) {
+        window.scrollBy(0, touchScrollState.velocity);
+        touchScrollState.velocity *= 0.95;
+        requestAnimationFrame(inertiaScroll);
+      } else {
+        touchScrollState.scrolling = false;
+      }
+    };
     plotElement.addEventListener("wheel", function(e) {
       if (e.deltaY !== 0) {
         window.scrollBy(0, e.deltaY);
-        e.preventDefault();
       }
     }, { passive: true });
-    let startY;
     plotElement.addEventListener("touchstart", function(e) {
-      startY = e.touches[0].clientY;
+      touchScrollState.startY = touchScrollState.lastY = e.touches[0].clientY;
+      touchScrollState.velocity = 0;
+      touchScrollState.scrolling = false;
     }, { passive: false });
     plotElement.addEventListener("touchmove", function(e) {
-      const deltaY = e.touches[0].clientY - startY;
-      window.scrollBy(0, -deltaY);
-      startY = e.touches[0].clientY;
-      e.preventDefault();
+      const deltaY = touchScrollState.lastY - e.touches[0].clientY;
+      window.scrollBy(0, deltaY);
+      touchScrollState.velocity = deltaY;
+      touchScrollState.lastY = e.touches[0].clientY;
+      touchScrollState.scrolling = true;
     }, { passive: false });
-    plotElement.addEventListener("touchend", function(e) {
-      e.preventDefault();
-    }, { passive: false });
-    plotElement.addEventListener("touchcancel", function(e) {
-      e.preventDefault();
-    }, { passive: false });
+    window.addEventListener("touchend", () => {
+      if (touchScrollState.scrolling) {
+        requestAnimationFrame(inertiaScroll);
+      }
+    });
   }
   document.addEventListener("scroll", (event) => {
+    touchScrollState.scrolling = false;
     pushBuffer(scrollBuf, window.scrollY);
     if (!ticking) {
       window.requestAnimationFrame(() => {
@@ -1109,7 +1126,7 @@
       });
       ticking = true;
     }
-  });
+  }, { passive: true });
 
   // ns-hugo:/home/mathijs/Work/Optia-repos/Optia-home/themes/up-business-theme/assets/js/animation/free_lunch.js
   function sin_noise(x) {
