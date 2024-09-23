@@ -822,7 +822,7 @@
   var rosenbrock = (x, y) => 0.7 * log(1 + 1.8 * sq(x - 0.4) + 2 * sq(y - 0.3) + sq(x * x - y * y) + 2 * sq(y - x * x)) + 1.1 * exp(-5 * (sq(x + 0.4) + sq(y + 0.2)));
   var xyz = generate_data(10, 70, rosenbrock);
   var zTrue = xyz.z;
-  xyz.colorscale = [
+  var colorscale = [
     ["0", "#063a82"],
     ["0.3", "#063a82"],
     ["1", "#97c1fb"]
@@ -833,22 +833,15 @@
     y: commonContourOption,
     z: commonContourOption
   };
-  var data = [
-    {
-      ...xyz,
-      type: "surface",
-      opacity: 0,
-      contours: contour,
-      ...dataCfg
-    }
-  ];
+  var data = [{ type: "surface", colorscale, opacity: 0, contours: contour, ...dataCfg }];
   var z0 = { x: -0.6, y: -0 };
   var trajectory = { x: [z0.x], y: [z0.y], z: [rosenbrock(z0.x, z0.y) + 0.05] };
   var fadeInState = {
     done: false,
-    len: 1,
+    len: 50,
     currFrame: 0,
-    interval: null
+    interval: null,
+    started: false
   };
   var trajAnimState = {
     converged: false,
@@ -958,6 +951,15 @@
   var plotContainer = document.getElementById("surface");
   function fadeIn(fadeInState2) {
     fadeInState2.interval = setInterval(() => {
+      if (!fadeInState2.started) {
+        Plotly.update("surface", {
+          x: [xyz.x],
+          y: [xyz.y],
+          z: [xyz.z],
+          opacity: 0
+        }, {}, [0]);
+        fadeInState2.started = true;
+      }
       if (!fadeInState2.done) {
         let i2 = fadeInState2.currFrame / fadeInState2.len;
         fadeInState2.done = i2 >= 1;
