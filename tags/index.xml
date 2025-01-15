@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Optia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.optia.be/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application</title>
+      <link>https://www.optia.be/tags/application/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.optia.be/tags/application/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regression</title>
+      <link>https://www.optia.be/tags/regression/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.optia.be/tags/regression/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Resource allocation</title>
+      <link>https://www.optia.be/tags/resource-allocation/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://www.optia.be/tags/resource-allocation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Optimization</title>
       <link>https://www.optia.be/tags/optimization/</link>
@@ -20,27 +41,6 @@
       <link>https://www.optia.be/tags/solvers/</link>
       <pubDate>Mon, 20 May 2024 00:00:00 +0000</pubDate>
       <guid>https://www.optia.be/tags/solvers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>css</title>
-      <link>https://www.optia.be/tags/css/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.optia.be/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>html</title>
-      <link>https://www.optia.be/tags/html/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.optia.be/tags/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>markdown</title>
-      <link>https://www.optia.be/tags/markdown/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://www.optia.be/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
