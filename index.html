@@ -532,7 +532,7 @@
     <div class="row justify-content-center pb-5">
       <div class="col-8">
         
-          <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3">Services</h3>
+          <h3 class="fs-1 fw-bold text-center text-primary-emphasis pb-3">What we do</h3>
         
         
           <p class="text-black-61 text-center pb-3"><p>We guide our clients from initial problem statement to final solution. Depending on the preferences and the expertise of the client, the final result may be a fully-featured software package, a report stating our recommendations for solution techniques, or anything in between.</p>
@@ -543,65 +543,83 @@
     </div>
     <div class="card-deck row g-5 justify-content-center">
       
-      <div class="card col-md-3 border mx-4">
         
-          
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card col-lg-4 col-8 border mx-4 media-element">
+    
+    <div class="img-container">
+        
 <center>
-    <img class="" src="https://www.optia.be/icons/consult_out.svg" alt="icons/consult_out.svg" style="max-width: 250px; width: 60%; height: auto;">
+    <img class="" src="https://www.optia.be/icons/isometric/modeling_export.svg" alt="icons/isometric/modeling_export.svg" style="max-width: 450px; width: 100%; height: auto; transform:translateY(-2em);">
 </center>
 
 
-            <div class="card-body text-center">
-              <h4 class="card-title text-center text-secondary pb-4">Consultancy</h4>
-              <p class="card-text text-primary-subtle pb-4">Get a detailed report with recommendations for algorithms and techniques.</p>
-            </div>
-            <div class="py-3 text-center">
-            <a class="btn btn-primary px-4" href="services">Learn more</a>
-            </div>
-          
-        
-      </div>
+    </div>
+    
+    <div class="card-body text-center">
+        <h4 class="card-title text-center text-secondary pb-4">Modeling</h4>
+        <p class="card-text text-primary-subtle pb-4">We transform complex real-world problem descriptions into well-structured mathematical models designed for efficient optimization. By working closely with you, we ensure the formulation accurately reflects all key constraints and objectives.</p>
+    </div>
+    <div class="py-3 text-center">
+        <a class="btn btn-primary px-4" href="services#modeling">Learn more</a>
+    </div>
+</div>
+
       
-      <div class="card col-md-3 border mx-4">
         
-          
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="card col-lg-4 col-8 border mx-4 media-element">
+    
+    <div class="img-container">
+        
 <center>
-    <img class="" src="https://www.optia.be/icons/libraries_out.svg" alt="icons/libraries_out.svg" style="max-width: 250px; width: 60%; height: auto;">
+    <img class="" src="https://www.optia.be/icons/isometric/solvers_export.svg" alt="icons/isometric/solvers_export.svg" style="max-width: 450px; width: 100%; height: auto; transform:translateY(-2em);">
 </center>
 
 
-            <div class="card-body text-center">
-              <h4 class="card-title text-center text-secondary pb-4">Library development</h4>
-              <p class="card-text text-primary-subtle pb-4">We develop software libraries to interface with your own, keeping you in full control.</p>
-            </div>
-            <div class="py-3 text-center">
-            <a class="btn btn-primary px-4" href="services">Learn more</a>
-            </div>
-          
-        
-      </div>
-      
-      <div class="card col-md-3 border mx-4">
-        
-          
-            
-<center>
-    <img class="" src="https://www.optia.be/icons/applications_out.svg" alt="icons/applications_out.svg" style="max-width: 250px; width: 60%; height: auto;">
-</center>
+    </div>
+    
+    <div class="card-body text-center">
+        <h4 class="card-title text-center text-secondary pb-4">Solver development</h4>
+        <p class="card-text text-primary-subtle pb-4">Some problems demand more than an off-the-shelf solution. We are not afraid to go beyond the standard toolkit, developing custom optimization algorithms that are smarter, faster, and built for your specific needs.</p>
+    </div>
+    <div class="py-3 text-center">
+        <a class="btn btn-primary px-4" href="services#solvers">Learn more</a>
+    </div>
+</div>
 
-
-            <div class="card-body text-center">
-              <h4 class="card-title text-center text-secondary pb-4">Prototype development</h4>
-              <p class="card-text text-primary-subtle pb-4">We develop easy-to-use applications, to run locally or on the web.</p>
-            </div>
-            <div class="py-3 text-center">
-            <a class="btn btn-primary px-4" href="services">Learn more</a>
-            </div>
-          
-        
-      </div>
       
     </div>
   </div>
@@ -732,7 +750,7 @@
 
  
 <script defer>(() => {
-  // ns-hugo:/Users/mathijssch/repos/Optia-home/themes/up-business-theme/assets/js/animation/numjs.js
+  // ns-hugo:/Users/mathijssch/repos/optia/Optia-home/themes/up-business-theme/assets/js/animation/numjs.js
   function gaussian(x, mean, variance) {
     return 1 / Math.sqrt(2 * variance * Math.PI) * Math.exp(-Math.pow(x - mean, 2) / (2 * variance));
   }
@@ -776,14 +794,14 @@
     return Z;
   }
 
-  // ns-hugo:/Users/mathijssch/repos/Optia-home/themes/up-business-theme/assets/js/animation/utils.js
+  // ns-hugo:/Users/mathijssch/repos/optia/Optia-home/themes/up-business-theme/assets/js/animation/utils.js
   function isInViewport(element) {
     var rect = element.getBoundingClientRect();
     var html = document.documentElement;
     return rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || html.clientHeight) && rect.left <= (window.innerWidth || html.clientWidth);
   }
 
-  // ns-hugo:/Users/mathijssch/repos/Optia-home/themes/up-business-theme/assets/js/animation/plotly_setup.js
+  // ns-hugo:/Users/mathijssch/repos/optia/Optia-home/themes/up-business-theme/assets/js/animation/plotly_setup.js
   var dataCfg = {
     showscale: false,
     hoverinfo: "none",
@@ -841,7 +859,7 @@
     }
   };
 
-  // ns-hugo:/Users/mathijssch/repos/Optia-home/themes/up-business-theme/assets/js/animation/plot3d.js
+  // ns-hugo:/Users/mathijssch/repos/optia/Optia-home/themes/up-business-theme/assets/js/animation/plot3d.js
   var plotElement = document.getElementById("surface");
   function generate_data(nx, ny, f) {
     let rs = linspace(0, 1, nx, true);
@@ -1181,7 +1199,7 @@
     }
   }, { passive: true });
 
-  // ns-hugo:/Users/mathijssch/repos/Optia-home/themes/up-business-theme/assets/js/animation/free_lunch.js
+  // ns-hugo:/Users/mathijssch/repos/optia/Optia-home/themes/up-business-theme/assets/js/animation/free_lunch.js
   function sin_noise(x) {
     return Math.sin(10 * Math.PI * (1 + 0.05 * (Math.random() - 0.5)) * x);
   }
