@@ -30,8 +30,8 @@
      inkscape:cy="258.63526"
      inkscape:window-width="1728"
      inkscape:window-height="1023"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
+     inkscape:window-x="70"
+     inkscape:window-y="1238"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      showguides="true"><inkscape:grid
@@ -4899,11 +4899,11 @@
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Blur"
        id="filter642"
-       x="-0.0049641489"
-       y="-0.008575285"
-       width="1.0099283"
-       height="1.0171506"><feGaussianBlur
-         stdDeviation="15 15"
+       x="-0.0039040112"
+       y="-0.0067439573"
+       width="1.007808"
+       height="1.0134879"><feGaussianBlur
+         stdDeviation="9.66103"
          result="fbSourceGraphic"
          id="feGaussianBlur642" /><feColorMatrix
          result="fbSourceGraphicAlpha"
